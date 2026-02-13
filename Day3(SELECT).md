@@ -466,4 +466,12 @@ Q 30 Solution
 SELECT count(DISTINCT dept) as unq_dept
 FROM employees;
 ```
+
+Q 39 Solution 
+```
+SELECT salary as second_highest FROM employees
+ORDER BY salary ASC
+LIMIT 1 OFFSET 1;
+
+```
 ---
