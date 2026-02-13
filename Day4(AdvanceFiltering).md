@@ -251,3 +251,26 @@ IS NULL   → missing values
 3. Why NULL cannot be compared using =  
 4. Which wildcard is faster % or _  
 5. Is BETWEEN inclusive?
+
+---
+Q 20 
+```
+SELECT  COUNT(*) AS count
+FROM employees
+WHERE city is NULL;
+```
+
+Q 29 
+```
+SELECT *
+FROM employees
+WHERE LENGTH(name) = 5;
+```
+
+Q 30 
+```
+SELECT *
+FROM employees
+WHERE name REGEXP '^[AEIOUaeiou].*[AEIOUaeiou]$';
+
+```
