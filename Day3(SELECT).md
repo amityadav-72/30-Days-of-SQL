@@ -460,3 +460,10 @@ LIMIT 3;
 15. How to filter multiple conditions efficiently  
 ```
 ---
+
+Q 30 Solution 
+```
+SELECT count(DISTINCT dept) as unq_dept
+FROM employees;
+```
+---
