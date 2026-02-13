@@ -475,3 +475,74 @@ LIMIT 1 OFFSET 1;
 
 ```
 ---
+
+
+## 🔹 1️⃣ Salary Above Average
+
+### ✅ Query
+```sql
+SELECT *
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+);
+```
+💡 Explanation
+- Subquery finds the average salary
+
+- Outer query returns employees earning more than average
+
+## 🔹 2️⃣ Employees from Same City as Amit
+✅ Query
+```
+SELECT *
+FROM employees
+WHERE city = (
+    SELECT city
+    FROM employees
+    WHERE name = 'Amit'
+);
+```
+### 💡 If multiple Amit exist → use this (safer)
+```
+SELECT *
+FROM employees
+WHERE city IN (
+    SELECT city
+    FROM employees
+    WHERE name = 'Amit'
+);
+```
+## 🔹 3️⃣ Departments with More Than One Employee
+✅ Query
+```
+SELECT dept, COUNT(*) AS total_employees
+FROM employees
+GROUP BY dept
+HAVING COUNT(*) > 1;
+```
+💡 Explanation
+GROUP BY dept → creates department groups
+HAVING COUNT(*) > 1 → filters groups with more than one employee
+
+## 🔥 Interview Upgrade Version
+Show full employee details from departments having more than 1 employee
+```
+SELECT *
+FROM employees
+WHERE dept IN (
+    SELECT dept
+    FROM employees
+    GROUP BY dept
+    HAVING COUNT(*) > 1
+);
+```
+
+🚀 Placement Tip
+These 3 cover concepts of:
+
+Question	Concept
+- Salary above average	Subquery + Aggregate
+- Same city as Amit	Scalar subquery
+- Dept > 1 employee	GROUP BY + HAVING
