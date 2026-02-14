@@ -1,5 +1,7 @@
 # 📘 DAY 5 --- SQL AGGREGATE FUNCTIONS
 
+
+
 Aggregate functions are used to perform calculations on multiple rows
 and return a **single summarized value**.
 
@@ -312,6 +314,45 @@ HAVING AVG(salary) > 50000;
 # 🏁 DAY 5 Questions
 
 ------------------------------------------------------------------------
+
+📘 Employees Practice Dataset
+# 🔹 Create Table
+```
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    city VARCHAR(50),
+    salary INT
+);
+```
+
+# 🔹 Insert Data
+```
+INSERT INTO employees VALUES
+(1,  'Amit',     'IT',       'Mumbai',    60000),
+(2,  'Neha',     'HR',       'Delhi',     45000),
+(3,  'Raj',      'Finance',  'Mumbai',    70000),
+(4,  'Sneha',    'IT',       'Pune',      52000),
+(5,  'Karan',    'Sales',    'Delhi',     48000),
+(6,  'Pooja',    'HR',       'Mumbai',    46000),
+(7,  'Vikas',    'IT',       'Delhi',     75000),
+(8,  'Rohit',    'Finance',  'Pune',      80000),
+(9,  'Anjali',   'Sales',    'Mumbai',    49000),
+(10, 'Suresh',   'IT',       'Delhi',     53000),
+(11, 'Meena',    'HR',       'Pune',      47000),
+(12, 'Arjun',    'Finance',  'Mumbai',    72000),
+(13, 'Komal',    'Sales',    'Delhi',     51000),
+(14, 'Nikhil',   'IT',       'Mumbai',    68000),
+(15, 'Swati',    'HR',       'Delhi',     44000),
+(16, 'Rahul',    'Finance',  'Pune',      66000),
+(17, 'Ayesha',   'Sales',    'Mumbai',    50000),
+(18, 'Manish',   'IT',       NULL,        61000),
+(19, 'Sara',     'HR',       NULL,        43000),
+(20, 'Tarun',    'Sales',    'Pune',      55000);
+```
+
+----------------------------
 
 ## 🟢 LEVEL 1 — COUNT()
 
