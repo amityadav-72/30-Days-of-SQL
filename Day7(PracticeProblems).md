@@ -1,5 +1,13 @@
 # 🧠 SQL Practice Questions (DDL + DML + SELECT)
 
+
+## 🚀 LeetCode SQL Study Plan
+
+📌 Practice the most important SQL interview questions here:  
+🔗 [SQL LEETCODE – Top 50](https://leetcode.com/studyplan/top-sql-50/)
+
+
+
 ---
 
 ## 🟢 DDL – Data Definition Language (1–10)
