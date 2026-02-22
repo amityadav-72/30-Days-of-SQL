@@ -214,8 +214,11 @@ JOIN is a powerful SQL operation that:
 
  # 🔗 INNER JOIN in DBMS -- Complete Guide
 
-## 🎯 Example Situation
 ## 🎯 Example Tables
+
+<table>
+<tr>
+<td>
 
 ### 🧑‍🎓 students
 
@@ -224,16 +227,18 @@ JOIN is a powerful SQL operation that:
 | 1 | Amit |
 | 2 | Neha |
 
----
+</td>
+<td>
 
 ### 📚 courses
 
 | course_id | course_name |
-|-----------|------------|
+|-----------|-------------|
 | 101 | SQL |
 | 102 | Java |
 
----
+</td>
+<td>
 
 ### 📝 enrollments
 
@@ -241,6 +246,10 @@ JOIN is a powerful SQL operation that:
 |------------|-----------|
 | 1 | 101 |
 | 2 | 102 |
+
+</td>
+</tr>
+</table>
 
 ### ❓ Requirement
 
