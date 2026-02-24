@@ -1,5 +1,7 @@
 # 30-Days-of-SQL
 
+- [Roadmap PDF ](https://github.com/user-attachments/files/25520463/sql.pdf)
+
 # 🚀 30-DAY SQL ROADMAP (2 HOURS DAILY)
 
 ## 🔰 WEEK 1 — FOUNDATIONS (DDL + BASIC SELECT)
