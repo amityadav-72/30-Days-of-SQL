@@ -338,6 +338,45 @@ LIMIT 3;
 
 # 🧪 DAY 3 PRACTICE QUESTIONS
 
+----
+## Create Database
+```
+CREATE DATABASE employee_practice;
+
+USE employee_practice;
+```
+
+## Create Table 
+```
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT,
+    city VARCHAR(50)
+);
+```
+
+## Insert Sample Data
+```
+INSERT INTO employees VALUES
+(1, 'Amit', 'IT', 60000, 'Mumbai'),
+(2, 'Neha', 'HR', 45000, 'Delhi'),
+(3, 'Rahul', 'Finance', 55000, 'Mumbai'),
+(4, 'Pooja', 'IT', 70000, 'Delhi'),
+(5, 'Suresh', 'HR', 38000, 'Pune'),
+(6, 'Kavita', 'IT', 75000, 'Delhi'),
+(7, 'Ankit', 'HR', 42000, 'Pune'),
+(8, 'Ramesh', 'Finance', 54000, 'Mumbai'),
+(9, 'Priya', 'IT', 48000, 'Pune'),
+(10, 'Mohit', 'Finance', 58000, 'Mumbai'),
+(11, 'Sneha', 'HR', 62000, 'Delhi'),
+(12, 'Vikas', 'IT', 52000, 'Pune'),
+(13, 'Arjun', 'Finance', 61000, 'Delhi'),
+(14, 'Deepak', 'IT', 40000, 'Mumbai'),
+(15, 'Nisha', 'HR', 47000, 'Pune');
+```
+
 ---
 
 ## 🟢 LEVEL 1 — BASIC SELECT
