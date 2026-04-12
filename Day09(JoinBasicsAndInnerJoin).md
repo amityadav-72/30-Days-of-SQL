@@ -675,3 +675,259 @@ DBMS may internally use:
 -   Use aliases for readability
 -   Index join columns for performance
 -   ON → matching, WHERE → filtering
+
+
+# 🧱 Practice Database Schema (SQL)
+
+Use the following tables to practice SQL queries like JOINs, GROUP BY, Subqueries, etc.
+
+---
+
+## 👨‍💼 Employees Table
+
+```sql
+CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT,
+    salary INT,
+    manager_id INT
+);
+```
+
+---
+
+## 🏢 Departments Table
+
+```sql
+CREATE TABLE Departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50),
+    location VARCHAR(50)
+);
+```
+
+---
+
+## 📦 Orders Table
+
+```sql
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    amount INT
+);
+```
+
+---
+
+## 👤 Customers Table
+
+```sql
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(50)
+);
+```
+
+---
+
+## 📚 Courses Table
+
+```sql
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(50),
+    instructor VARCHAR(50)
+);
+```
+
+---
+
+## 🎓 Students Table
+
+```sql
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    course_id INT
+);
+```
+
+# 📊 Sample Data for SQL Practice
+
+This dataset is designed for practicing SQL concepts like JOINs, GROUP BY, Subqueries, etc.
+
+---
+
+## 🧱 1. Employees Data
+
+```sql
+INSERT INTO Employees VALUES
+(1, 'Amit', 1, 60000, NULL),
+(2, 'Rahul', 2, 50000, 1),
+(3, 'Sneha', 1, 70000, 1),
+(4, 'Priya', 3, 45000, 2),
+(5, 'Karan', 2, 80000, 1),
+(6, 'Neha', 3, 55000, 2),
+(7, 'Arjun', 1, 90000, 3),
+(8, 'Riya', 2, 40000, 5);
+```
+
+---
+
+## 🏢 2. Departments Data
+
+```sql
+INSERT INTO Departments VALUES
+(1, 'IT', 'Mumbai'),
+(2, 'HR', 'Delhi'),
+(3, 'Finance', 'Pune'),
+(4, 'Marketing', 'Bangalore');
+```
+
+---
+
+## 👤 3. Customers Data
+
+```sql
+INSERT INTO Customers VALUES
+(1, 'Rohit', 'Mumbai'),
+(2, 'Anjali', 'Delhi'),
+(3, 'Vikas', 'Pune'),
+(4, 'Simran', 'Mumbai'),
+(5, 'Aman', 'Bangalore');
+```
+
+---
+
+## 📦 4. Orders Data
+
+```sql
+INSERT INTO Orders VALUES
+(101, 1, '2024-01-10', 5000),
+(102, 2, '2024-01-12', 7000),
+(103, 1, '2024-02-01', 3000),
+(104, 3, '2024-02-10', 9000),
+(105, 4, '2024-03-05', 4000),
+(106, 2, '2024-03-10', 6000),
+(107, 1, '2024-03-15', 8000),
+(108, 5, '2024-04-01', 10000);
+```
+
+---
+
+## 🎓 5. Courses Data
+
+```sql
+INSERT INTO Courses VALUES
+(1, 'Java', 'Mr. Sharma'),
+(2, 'Python', 'Ms. Gupta'),
+(3, 'SQL', 'Mr. Khan'),
+(4, 'Web Dev', 'Ms. Mehta');
+```
+
+---
+
+## 📚 6. Students Data
+
+```sql
+INSERT INTO Students VALUES
+(1, 'Aman', 1),
+(2, 'Riya', 2),
+(3, 'Sohan', 3),
+(4, 'Neha', 1),
+(5, 'Kunal', 2),
+(6, 'Pooja', 3),
+(7, 'Ankit', 4),
+(8, 'Simran', 1);
+```
+
+---
+
+## 🔥 Practice Example
+
+### 👉 Get employee name + department name
+
+```sql
+SELECT e.name, d.dept_name
+FROM Employees e
+INNER JOIN Departments d
+ON e.dept_id = d.dept_id;
+```
+
+# 🧠 SQL INNER JOIN Practice Questions (Basic → Advanced)
+
+Practice these questions using the given schema and data.
+
+---
+
+## 🔰 BASIC INNER JOIN QUESTIONS (1–15)
+
+1. Get employee names with their department names
+2. Show all employees and their department locations
+3. List students with their course names
+4. Get customer names and their order amounts
+5. Show employees working in “IT” department
+6. Get all orders with customer names
+7. List employees with salary > 50,000 and department name
+8. Show students enrolled in “Java” course
+9. Get employees and their managers (self join)
+10. Show departments with employee names
+11. Find employees in Mumbai location departments
+12. Get all customers who placed orders
+13. Show orders placed after 2024 with customer name
+14. List employees with department id = 2
+15. Get course names with student names
+
+---
+
+## ⚙️ INTERMEDIATE QUESTIONS (16–35)
+
+16. Count employees in each department
+17. Find total salary per department
+18. Get highest salary employee in each department
+19. Show customers with total order amount
+20. Find departments with more than 3 employees
+21. Get average salary per department
+22. List employees whose salary > department average
+23. Show customers who placed more than 2 orders
+24. Get latest order per customer
+25. Find students count per course
+26. Get department with highest total salary
+27. Show employees and their manager names
+28. Find employees who have same manager
+29. Get customers from same city with orders
+30. Find departments where avg salary > 60k
+31. Get top 3 highest paid employees with department
+32. Show employees not in HR department
+33. Find courses with more than 5 students
+34. Get customers who spent more than 10,000
+35. Show employee + department sorted by salary
+
+---
+
+## 🚀 ADVANCED QUESTIONS (36–50)
+
+36. Find second highest salary in each department
+37. Get employees earning more than their manager
+38. Show department-wise rank of employees by salary
+39. Find duplicate salary employees within same department
+40. Get employees who joined same dept as their manager
+41. Find customers who never ordered (Hint: LEFT JOIN comparison)
+42. Get running total of orders per customer
+43. Show top spending customer per city
+44. Find employees working in same department & location
+45. Get employees whose salary is top 10% in department
+46. Find departments where all employees earn > 50k
+47. Get employees with no manager (using join logic)
+48. Show gap between employee salary and department avg
+49. Get most popular course (max students)
+50. Find customers who ordered on consecutive days
+
+---
+
+
+
